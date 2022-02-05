@@ -1,0 +1,72 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: 'Merriweather', serif;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+body{
+  background: rgba(255,175,75,1);
+background: -moz-linear-gradient(-45deg, rgba(255,175,75,1) 0%, rgba(255,175,75,1) 40%, rgba(255,146,10,1) 89%, rgba(255,146,10,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(255,175,75,1)), color-stop(40%, rgba(255,175,75,1)), color-stop(89%, rgba(255,146,10,1)), color-stop(100%, rgba(255,146,10,1)));
+background: -webkit-linear-gradient(-45deg, rgba(255,175,75,1) 0%, rgba(255,175,75,1) 40%, rgba(255,146,10,1) 89%, rgba(255,146,10,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(255,175,75,1) 0%, rgba(255,175,75,1) 40%, rgba(255,146,10,1) 89%, rgba(255,146,10,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(255,175,75,1) 0%, rgba(255,175,75,1) 40%, rgba(255,146,10,1) 89%, rgba(255,146,10,1) 100%);
+background: linear-gradient(135deg, rgba(255,175,75,1) 0%, rgba(255,175,75,1) 40%, rgba(255,146,10,1) 89%, rgba(255,146,10,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', endColorstr='#ff920a', GradientType=1 );
+}
+
+h1{
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 900;
+  margin: 5% 10%;
+
+}
+.inputs{
+  text-align: center;
+  font-size: 1.7rem;
+  margin-bottom: 40px;
+}
+h3{
+  font-size: 3rem;
+}
+ul{
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0 10%;
+ 
+}
+li{
+  width: 21%;
+  margin-bottom: 20px;
+  
+}
+img{
+  width: 75%;
+  align-items: center;
+  transition: box-shadow 0.7s;
+  border-radius: 200px 200px 200px 200px;
+  -moz-border-radius: 200px 200px 200px 200px;
+  -webkit-border-radius: 200px 200px 200px 200px;
+}
+img:hover{
+  
+  border: 0px solid #000000;
+  -webkit-box-shadow: 7px 10px 72px 16px rgba(0,0,0,0.75);
+  -moz-box-shadow: 7px 10px 72px 16px rgba(0,0,0,0.75);
+  box-shadow: 7px 10px 72px 16px rgba(0,0,0,0.75); 
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
