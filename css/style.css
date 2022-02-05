@@ -13,14 +13,8 @@
 /* LAYOUT
 /*******************************************/
 body{
-  background: rgba(255,175,75,1);
-background: -moz-linear-gradient(-45deg, rgba(255,175,75,1) 0%, rgba(255,175,75,1) 40%, rgba(255,146,10,1) 89%, rgba(255,146,10,1) 100%);
-background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(255,175,75,1)), color-stop(40%, rgba(255,175,75,1)), color-stop(89%, rgba(255,146,10,1)), color-stop(100%, rgba(255,146,10,1)));
-background: -webkit-linear-gradient(-45deg, rgba(255,175,75,1) 0%, rgba(255,175,75,1) 40%, rgba(255,146,10,1) 89%, rgba(255,146,10,1) 100%);
-background: -o-linear-gradient(-45deg, rgba(255,175,75,1) 0%, rgba(255,175,75,1) 40%, rgba(255,146,10,1) 89%, rgba(255,146,10,1) 100%);
-background: -ms-linear-gradient(-45deg, rgba(255,175,75,1) 0%, rgba(255,175,75,1) 40%, rgba(255,146,10,1) 89%, rgba(255,146,10,1) 100%);
-background: linear-gradient(135deg, rgba(255,175,75,1) 0%, rgba(255,175,75,1) 40%, rgba(255,146,10,1) 89%, rgba(255,146,10,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', endColorstr='#ff920a', GradientType=1 );
+background-color: rgb(175, 164, 164);
+height: 100%;
 }
 
 h1{
@@ -66,7 +60,20 @@ img:hover{
   -moz-box-shadow: 7px 10px 72px 16px rgba(0,0,0,0.75);
   box-shadow: 7px 10px 72px 16px rgba(0,0,0,0.75); 
 }
-
+.hidden{
+  display: none;
+}
+.opis{
+  text-align: center;
+  margin: 20px 20% 20px 20%
+}
+.znak{
+  font-size: 2.5rem;
+  margin: 50px 0 40px 0;
+}
+.horoskop{
+  font-size: 2rem;
+}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
