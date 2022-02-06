@@ -7,9 +7,12 @@ document.querySelector('#check').addEventListener('click', defineHoroscope);
 
 
  function showHoroscope(number){
+        document.querySelector('.znak').classList.remove('hidden')
+        document.querySelector('.horoskop').classList.remove('hidden')
         document.querySelector(".znak").innerHTML = horoscopes[number]
         document.querySelector(".horoskop").innerHTML = description[number]
         document.querySelector('.list').classList.add('hidden')
+        document.querySelector("#powrót").classList.remove('hidden')
     }
 
 function defineHoroscope() {
@@ -42,6 +45,7 @@ function defineHoroscope() {
         showHoroscope(11)
     }else {
         document.querySelector(".znak").innerHTML = 'Nieprawidłowa data. \n Spróbuj ponownie'
+        document.querySelector('.horoskop').classList.add('hidden')
     }
 }
 
@@ -93,4 +97,13 @@ function skorpionClicked(){
 }
 function strzelecClicked(){
     showHoroscope(11)
+}
+
+document.querySelector('#powrót').addEventListener('click', showStart)
+
+function showStart(){
+    document.querySelector('.znak').classList.add('hidden')
+    document.querySelector('.horoskop').classList.add('hidden')
+    document.querySelector('.list').classList.remove('hidden')
+    document.querySelector('#powrót').classList.add('hidden')
 }
