@@ -1,109 +1,123 @@
-const horoscopes = ['Koziorożec', 'Wodnik', 'Ryby', 'Baran', 'Byk', 'Bliźnięta', 'Rak' , 'Lew', 'Panna', 'Waga', 'Skorpion', 'Strzelec']
-const description = ['Księżyc, który przebywa w znaku Barana, postawi Cię na równe nogi. Otrzymasz jakiś znak, którego wyglądałeś i który zachęci Cię do natychmiastowej aktywności. Nie usiedzisz w domu. Ktoś czeka na Twoje towarzystwo i je otrzyma.', 'Układ na niebie Ci sprzyja. Twoje powodzenie u płci przeciwnej będzie na bardzo wysokim poziomie tak jak i samopoczucie. Dzisiaj nie będziesz umiał narzucić sobie systematyczności czy ograniczeń. Popłyniesz z prądem.', 'To nie będzie dobry dzień na duży wysiłek fizyczny. Możesz czuć, że ćmi Cię głowa, a wszyscy wokół Ciebie zachowują się zbyt głośno. Poświęcisz sobotę na to, aby zadbać o swoje sprawy, komfort i higienę psychiczną. Nie doradzaj innym, postaw na ciszę.', 'Dzisiaj zapragniesz coś przypieczętować, uzyskać jakąś obietnicę lub gwarancję. Będziesz działał ostrożnie, a nawet w sposób wyrachowany. W drugiej połowie dnia staniesz się bardzo aktywny towarzysko i niewykluczone, że sobotę zakończysz na jakiejś imprezie.',  'Dzisiaj trochę przyhamujesz, staniesz się bardziej rozleniwiony i spokojniejszy. Postanowisz zająć się sprawami domu, rosnącymi stertami prania czy prasowania. Nie będziesz mieć ochoty na żadne wyjścia ani gości. Niestety wieczorem wbrew oczekiwaniom ktoś zapuka.', 'To będzie aktywna, pracowita i obfitująca w nowe kontakty towarzysko-zawodowe sobota. Podzielisz sprawnie czas pomiędzy obowiązki i rozrywkę. Możliwe krótkie podróże na zakupy. Dzisiaj będziesz cieszyć się życiem.','Księżyc w znaku Barana podniesie Ci ciśnienie i podrażni układ pokarmowy. Nie słuchaj podszeptów złości. Nie od dzisiaj wiadomo, że gniew jest złym doradcą. Ktoś może Cię wyprowadzić z równowagi swoimi złośliwymi uwagami, ale zbądź je milczeniem, tak będzie lepiej.', 'To będzie udana i imprezowa sobota. Możesz wziąć udział w jakimś karnawałowym szaleństwie. Nieoczekiwanie zaiskrzy pomiędzy Tobą a jakąś osobą, z którą miałeś Lwie do tej pory dość koleżeński kontakt. Wieczór upłynie wesoło i rozrywkowo.', 'Układ na niebie postawi dzisiaj przed Tobą ciężkie zadania. Nie szafuj swoimi siłami, zbieraj je i zatrzymaj na wysiłek, który dopiero przed Tobą. Będziesz musiała pilnować swoich granic i nie pozwalać innym na wykorzystywanie Cię do swoich celów, co niestety jest dzisiaj prawdopodobne.', 'Księżyc w opozycyjnym znaku Barana zachęca Cię do wyjścia z domu i skorzystania z uroków karnawału. Na chwilę oderwiesz się od rzeczywistości, zapomnisz o problemach i oddasz przyjemnej zabawie w gronie dobrych znajomych.', 'Dzisiaj będziesz mieć wielki galimatias w swoich planach i wydarzeniach. Na szczęście nie zabraknie Ci energii, aby wszystko poskładać i nadać temu odpowiednie ramy. Wieczorem spotkanie z kimś, z kim nadajesz na tych samych falach, wprawi Cię w cudowny nastrój.', 'Twoi znajomi przejdą dzisiaj samych siebie. Ktoś wyciągnie Cię na spotkanie, w którego trakcie możesz spodziewać się przekroczenia pewnych limitów. Uważaj, ponieważ Księżyc w znaku Barana będzie zachęcał Cię do brawurowych zachowań, za które można złapać co najmniej mandat.']
-
 document.querySelector('#check').addEventListener('click', defineHoroscope);
+const images = document.querySelector('.images');
+const error = document.querySelector(".error")
+const descriptions = document.querySelector('.descriptions')
+const powrót = document.querySelector('#powrót')
+const koziorożec = document.querySelector('.koziorożec');
+const wodnik = document.querySelector('.wodnik');
+const ryby = document.querySelector('.ryby');
+const baran = document.querySelector('.baran');
+const byk = document.querySelector('.byk');
+const bliźnięta = document.querySelector('.bliźnięta');
+const rak = document.querySelector('.rak');
+const lew = document.querySelector('.lew');
+const panna = document.querySelector('.panna');
+const waga = document.querySelector('.waga');
+const skorpion = document.querySelector('.skorpion');
+const strzelec = document.querySelector('.strzelec');
+const allDescriptions = document.querySelectorAll('.opis')
 
-
-
-
- function showHoroscope(number){
-        document.querySelector('.znak').classList.remove('hidden')
-        document.querySelector('.horoskop').classList.remove('hidden')
-        document.querySelector(".znak").innerHTML = horoscopes[number]
-        document.querySelector(".horoskop").innerHTML = description[number]
-        document.querySelector('.list').classList.add('hidden')
-        document.querySelector("#powrót").classList.remove('hidden')
-    }
 
 function defineHoroscope() {
     let day = document.querySelector('#day').value
     let month = document.querySelector('#month').value
     
    if( (month == 12 && day >= 22 && day <= 31) || (month == 1 && day <= 19 && day >= 1)){
-        showHoroscope(0)
+      showHoroscope(koziorożec)
     }else if ((month == 1 && day >= 20 && day <=31 ) || ( month == 2 && day >= 1 && day <= 18)){
-        showHoroscope(1)
+       showHoroscope(wodnik)
     }else if(( month == 2 && day >= 19 && day <=29) || (month == 3 && day >= 1 && day <= 20)){
-        showHoroscope(2)
+        showHoroscope(ryby)
     }else if(( month == 3 && day >=21 && day <= 31) || (month == 4 && day >= 1 && day <= 19)){
-        showHoroscope(3)
+        showHoroscope(baran)
     }else if(( month == 4 && day >= 20 && day <= 30) || (month == 5 && day >= 1 && day <= 22)){
-        showHoroscope(4)
+        showHoroscope(byk)
     }else if(( month == 5 && day >= 23 && day <= 31) || (month == 6 && day >= 1 && day <= 21)){
-        showHoroscope(5)
+        showHoroscope(bliźnięta)
     }else if(( month == 6 && day >= 22 && day <= 30) || (month == 7 && day >= 1 && day <= 22)){
-        showHoroscope(6)
+        showHoroscope(rak)
     }else if(( month == 7 && day >= 23 && day <= 31) || (month == 8 && day >= 1 && day <= 23)){
-        showHoroscope(7)
+        showHoroscope(lew)
     }else if(( month == 8 && day >= 24 && day <= 31) || (month == 9 && day >= 1 && day <= 22)){
-        showHoroscope(8)
+        showHoroscope(panna)
     }else if(( month == 9 && day >= 23 && day <= 30) || (month == 10 && day >= 1 && day <= 22)){
-        showHoroscope(9)
+       showHoroscope(waga)
     }else if(( month == 10 && day >= 23 && day <= 31) || (month == 11 && day >= 1 && day <= 21)){
-        showHoroscope(10)
+        showHoroscope(skorpion)
     }else if(( month == 11 && day >= 22 && day <= 30) || (month == 12 && day >= 1 && day <= 21)){
-        showHoroscope(11)
+       showHoroscope(strzelec)
     }else {
-        document.querySelector(".znak").innerHTML = 'Nieprawidłowa data. \n Spróbuj ponownie'
-        document.querySelector('.horoskop').classList.add('hidden')
+        error.classList.remove('hidden')
+        error.innerText = 'Nieprawidłowa data. \n Spróbuj ponownie'
+        images.classList.add('hidden');
+        powrót.classList.remove('hidden');
+        descriptions.classList.remove('hidden')
     }
 }
 
-document.querySelector('#koziorożec').addEventListener('click', koziorożecClicked)
-document.querySelector('#wodnik').addEventListener('click', wodnikClicked)
-document.querySelector('#ryby').addEventListener('click', rybyClicked)
-document.querySelector('#baran').addEventListener('click', baranClicked)
-document.querySelector('#byk').addEventListener('click', bykClicked)
-document.querySelector('#bliźnięta').addEventListener('click', bliźniętaClicked)
-document.querySelector('#rak').addEventListener('click', rakClicked)
-document.querySelector('#lew').addEventListener('click', lewClicked)
-document.querySelector('#panna').addEventListener('click', pannaClicked)
-document.querySelector('#waga').addEventListener('click', wagaClicked)
-document.querySelector('#skorpion').addEventListener('click', skorpionClicked)
-document.querySelector('#strzelec').addEventListener('click', strzelecClicked)
+function showHoroscope(nazwa){
+    nazwa.classList.remove('hidden');
+    images.classList.add('hidden');
+    powrót.classList.remove('hidden');
+    descriptions.classList.remove('hidden')
+    
+}
+powrót.addEventListener('click', back)
 
-function koziorożecClicked(){
-    showHoroscope(0)
+function back(){
+    images.classList.remove('hidden');
+    powrót.classList.add('hidden');
+    descriptions.classList.add('hidden');
+    allDescriptions.forEach(description => { description.classList.add('hidden')})
+    
 }
-function wodnikClicked(){
-    showHoroscope(1)
+document.querySelector('#koziorożec').addEventListener('click', showKoziorożec);
+document.querySelector('#wodnik').addEventListener('click', showWodnik);
+document.querySelector('#ryby').addEventListener('click', showRyby);
+document.querySelector('#baran').addEventListener('click', showBaran);
+document.querySelector('#byk').addEventListener('click', showByk);
+document.querySelector('#bliźnięta').addEventListener('click', showBliźnięta);
+document.querySelector('#rak').addEventListener('click', showRak);
+document.querySelector('#lew').addEventListener('click', showLew);
+document.querySelector('#panna').addEventListener('click', showPanna);
+document.querySelector('#waga').addEventListener('click', showWaga);
+document.querySelector('#skorpion').addEventListener('click', showSkorpion);
+document.querySelector('#strzelec').addEventListener('click', showStrzelec);
+
+function showKoziorożec(){
+    showHoroscope(koziorożec)
 }
-function rybyClicked(){
-    showHoroscope(2)
+function showWodnik(){
+    showHoroscope(wodnik)
 }
-function baranClicked(){
-    showHoroscope(3)
+function showRyby(){
+    showHoroscope(ryby)
 }
-function bykClicked(){
-    showHoroscope(4)
+function showBaran(){
+    showHoroscope(baran)
 }
-function bliźniętaClicked(){
-    showHoroscope(5)
+function showByk(){
+    showHoroscope(byk)
 }
-function rakClicked(){
-    showHoroscope(6)
+function showBliźnięta(){
+    showHoroscope(bliźnięta)
 }
-function lewClicked(){
-    showHoroscope(7)
+function showRak(){
+    showHoroscope(rak)
 }
-function pannaClicked(){
-    showHoroscope(8)
+function showLew(){
+    showHoroscope(lew)
 }
-function wagaClicked(){
-    showHoroscope(9)
+function showPanna(){
+    showHoroscope(panna)
 }
-function skorpionClicked(){
-    showHoroscope(10)
+function showWaga(){
+    showHoroscope(waga)
 }
-function strzelecClicked(){
-    showHoroscope(11)
+function showSkorpion(){
+    showHoroscope(skorpion)
+}
+function showStrzelec(){
+    showHoroscope(strzelec)
 }
 
-document.querySelector('#powrót').addEventListener('click', showStart)
-
-function showStart(){
-    document.querySelector('.znak').classList.add('hidden')
-    document.querySelector('.horoskop').classList.add('hidden')
-    document.querySelector('.list').classList.remove('hidden')
-    document.querySelector('#powrót').classList.add('hidden')
-}
